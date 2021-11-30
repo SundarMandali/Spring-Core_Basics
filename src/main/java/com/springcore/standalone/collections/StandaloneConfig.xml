@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  https://www.springframework.org/schema/context
+  https://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util
+  http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!-- standalone list(LINKED LIST) -->
+	<util:list list-class="java.util.LinkedList" id="Listfriends">
+	<value>RAM</value>
+	<value>Raju</value>
+	<value>Rakesh</value>
+	<value>Roshan</value>
+	</util:list>
+
+<!-- standalone list(VECTOR) -->
+	<util:list list-class="java.util.Vector" id="Vectorfriends">
+	<value>Rahul</value>
+	<value>Rohith</value>
+	<value>Rakesh</value>
+	<value>Rohnith</value>
+	</util:list>
+	
+<!-- standalone Map -->
+	<util:map map-class="java.util.HashMap" id="Mapfriends">
+	<entry key="Python" value="1000"/>
+	<entry key="Java" value="2000"/>
+	</util:map>
+
+<!-- standalone Properties -->
+	<util:properties id="tasteFood">
+	<prop key="Sugar">sweet</prop>
+	<prop key="lemon">sour</prop>
+	<prop key="Chilli">spicy</prop>
+	</util:properties>
+
+	<bean class="com.springcore.standalone.collections.Person" name="p1">
+	<property name="friends" ref="Listfriends"/>
+	<property name="feestructure" ref="Mapfriends"/>
+	<property name="properties" ref="tasteFood"/>
+	</bean>
+	
+	<bean class="com.springcore.standalone.collections.Person" name="p2">
+	<property name="friends" ref="Vectorfriends" />
+	<property name="feestructure" ref="Mapfriends"/>
+	<property name="properties" ref="tasteFood"/>
+	</bean>
+	
+	
+	
+</beans>

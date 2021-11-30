@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  https://www.springframework.org/schema/context
+  https://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.springcore.collections.Employee" name="Emp">
+	<property name="name" value="Sundar"/>
+	
+	<property name="phones">
+		<list>
+			<value>9689</value>
+			<value>9999</value>
+			<value>9888</value>
+			<null/>
+		</list>
+	</property>
+	
+	<property name="address">
+		<set>
+		<value>Pitlam</value>
+		<value>Hyderabad</value>
+		<value>Kamareddy</value>
+		</set>
+	</property>
+	
+	<property name="courses">
+		<map>
+		<entry key="c" value="2 months"/>
+		<entry key="java" value="3 months"/>
+		<entry key="python" value="1.5 month"/>
+	</map>
+	</property>
+	
+	<property name="details">
+		<props>
+		<prop key="apples">one</prop>
+		<prop key="oranges">two</prop>
+		<prop key="bananas">three</prop>
+		</props>
+	</property>
+	
+</bean>
+
+</beans>
